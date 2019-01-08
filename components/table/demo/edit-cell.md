@@ -15,7 +15,7 @@ Table with editable cells.
 
 ````jsx
 import {
-  Table, Input, Button, Popconfirm, Form,
+  Table, Input, Button, Popconfirm, Form, Select 
 } from 'antd';
 
 const FormItem = Form.Item;
@@ -100,10 +100,9 @@ class EditableCell extends React.Component {
                       }],
                       initialValue: record[dataIndex],
                     })(
-                      <Input
-                        ref={node => (this.input = node)}
-                        onPressEnter={this.save}
-                      />
+                    <Select>
+                      <Option value="lucy">lucy</Option>
+                    </Select>
                     )}
                   </FormItem>
                 ) : (
